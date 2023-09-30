@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <title>Dashboard</title>
+</head>
+
+<body style="
+    width: 100vw;
+    height: 100vh;
+    padding: 4vw;
+">
+<nav style="
+    top: 0px;
+    position: absolute;
+    left: 0px;
+    padding: 8px;
+    width: 100vw;
+    padding-top: 1vw;
+    padding-left: 4vw;
+    background: #30a1ff;
+    margin-bottom: 0vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2vw;
+">
+  <div href="/fabflix/_dashboard/index.html" style="
+    color: white;
+    text-decoration: none;
+    border: white solid;
+    padding: 8px;
+    font-size: 14px;
+    width: 90px;
+    text-align: center;
+    cursor: default;
+    font-weight: bold;
+    ">Home</div>
+  <a href="/fabflix/_dashboard/star.html" style="
+    color: white;
+    text-decoration: none;
+    border: white solid;
+    padding: 8px;
+    font-size: 14px;
+    width: 90px;
+    text-align: center;
+    ">Add Star</a>
+  <a href="/fabflix/_dashboard/movie.html" style="
+    color: white;
+    text-decoration: none;
+    border: white solid;
+    padding: 8px;
+    font-size: 14px;
+    width: 90px;
+    text-align: center;
+    ">Add Movie</a>
+</nav>
+
+<h1 style="
+    text-align: center;
+    color: #30a1ff;
+    font-size: 64px;
+    font-weight: bold;
+    margin-top: 20vh;
+">Metadata</h1>
+<div>
+  <h2 style="
+    color: #30a1ff;
+    font-size: 32px;
+    font-weight: bold;
+">movies</h2>
+  <table class="table table-striped" style="
+    border-radius: 1vw;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    overflow: hidden;
+">
+    <thead style="
+    color: white;
+    background: #007bff;
+">
+    <tr>
+      <th>Attribute</th>
+      <th>Type</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th>id</th>
+      <th>VARCHAR</th>
+    </tr>
+    <tr>
+      <th>title</th>
+      <th>VARCHAR</th>
+    </tr>
+    <tr>
+      <th>year</th>
+      <th>INT</th>
+    </tr>
+    <tr>
+      <th>director</th>
+      <th>VARCHAR</th>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+  <h2 style="
+    color: #30a1ff;
+    font-size: 32px;
+    font-weight: bold;
+">stars</h2>
+  <table class="table table-striped" style="
+    border-radius: 1vw;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    overflow: hidden;
+">
+    <thead style="
+    color: white;
+    background: #007bff;
+">
+    <tr>
+      <th>Attribute</th>
+      <th>Type</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th>id</th>
+      <th>VARCHAR</th>
+    </tr>
+    <tr>
+      <th>name</th>
+      <th>VARCHAR</th>
+    </tr>
+    <tr>
+      <th>birthYear</th>
+      <th>INT</th>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+  <h2 style="
+    color: #30a1ff;
+    font-size: 32px;
+    font-weight: bold;
+">stars_in_movies</h2>
+  <table class="table table-striped" style="
+    border-radius: 1vw;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    overflow: hidden;
+">
+    <thead style="
+    color: white;
+    background: #007bff;
+">
+    <tr>
+      <th>Attribute</th>
+      <th>Type</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th>starId</th>
+      <th>VARCHAR</th>
+    </tr>
+    <tr>
+      <th>movieId</th>
+      <th>VARCHAR</th>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+  <h2 style="
+    color: #30a1ff;
+    font-size: 32px;
+    font-weight: bold;
+">genres</h2>
+  <table class="table table-striped" style="
+    border-radius: 1vw;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    overflow: hidden;
+">
+    <thead style="
+    color: white;
+    background: #007bff;
+">
+    <tr>
+      <th>Attribute</th>
+      <th>Type</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th>id</th>
+      <th>INT</th>
+    </tr>
+    <tr>
+      <th>name</th>
+      <th>VARCHAR</th>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+  <h2 style="
+    color: #30a1ff;
+    font-size: 32px;
+    font-weight: bold;
+">genres_in_movies</h2>
+  <table class="table table-striped" style="
+    border-radius: 1vw;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    overflow: hidden;
+">
+    <thead style="
+    color: white;
+    background: #007bff;
+">
+    <tr>
+      <th>Attribute</th>
+      <th>Type</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th>genreId</th>
+      <th>INT</th>
+    </tr>
+    <tr>
+      <th>movieId</th>
+      <th>VARCHAR</th>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+  <h2 style="
+    color: #30a1ff;
+    font-size: 32px;
+    font-weight: bold;
+">customers</h2>
+  <table class="table table-striped" style="
+    border-radius: 1vw;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    overflow: hidden;
+">
+    <thead style="
+    color: white;
+    background: #007bff;
+">
+    <tr>
+      <th>Attribute</th>
+      <th>Type</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th>id</th>
+      <th>INT</th>
+    </tr>
+    <tr>
+      <th>firstName</th>
+      <th>VARCHAR</th>
+    </tr>
+    <tr>
+      <th>lastName</th>
+      <th>VARCHAR</th>
+    </tr>
+    <tr>
+      <th>ccId</th>
+      <th>VARCHAR</th>
+    </tr>
+    <tr>
+      <th>address</th>
+      <th>VARCHAR</th>
+    </tr>
+    <tr>
+      <th>email</th>
+      <th>VARCHAR</th>
+    </tr>
+    <tr>
+      <th>password</th>
+      <th>VARCHAR</th>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+  <h2 style="
+    color: #30a1ff;
+    font-size: 32px;
+    font-weight: bold;
+">sales</h2>
+  <table class="table table-striped" style="
+    border-radius: 1vw;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    overflow: hidden;
+">
+    <thead style="
+    color: white;
+    background: #007bff;
+">
+    <tr>
+      <th>Attribute</th>
+      <th>Type</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th>id</th>
+      <th>INT</th>
+    </tr>
+    <tr>
+      <th>customerId</th>
+      <th>INT</th>
+    </tr>
+    <tr>
+      <th>movieId</th>
+      <th>VARCHAR</th>
+    </tr>
+    <tr>
+      <th>saleDate</th>
+      <th>DATE</th>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+  <h2 style="
+    color: #30a1ff;
+    font-size: 32px;
+    font-weight: bold;
+">creditcards</h2>
+  <table class="table table-striped" style="
+    border-radius: 1vw;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    overflow: hidden;
+">
+    <thead style="
+    color: white;
+    background: #007bff;
+">
+    <tr>
+      <th>Attribute</th>
+      <th>Type</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th>id</th>
+      <th>VARCHAR</th>
+    </tr>
+    <tr>
+      <th>firstName</th>
+      <th>VARCHAR</th>
+    </tr>
+    <tr>
+      <th>lastName</th>
+      <th>VARCHAR</th>
+    </tr>
+    <tr>
+      <th>expiration</th>
+      <th>DATE</th>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+  <h2 style="
+    color: #30a1ff;
+    font-size: 32px;
+    font-weight: bold;
+">ratings</h2>
+  <table class="table table-striped" style="
+    border-radius: 1vw;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    overflow: hidden;
+">
+    <thead style="
+    color: white;
+    background: #007bff;
+">
+    <tr>
+      <th>Attribute</th>
+      <th>Type</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th>movieId</th>
+      <th>VARCHAR</th>
+    </tr>
+    <tr>
+      <th>rating</th>
+      <th>FLOAT</th>
+    </tr>
+    <tr>
+      <th>numVotes</th>
+      <th>INT</th>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+  <h2 style="
+    color: #30a1ff;
+    font-size: 32px;
+    font-weight: bold;
+">employees</h2>
+  <table class="table table-striped" style="
+    border-radius: 1vw;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    overflow: hidden;
+">
+    <thead style="
+    color: white;
+    background: #007bff;
+">
+    <tr>
+      <th>Attribute</th>
+      <th>Type</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th>email</th>
+      <th>VARCHAR</th>
+    </tr>
+    <tr>
+      <th>password</th>
+      <th>VARCHAR</th>
+    </tr>
+    <tr>
+      <th>fullname</th>
+      <th>VARCHAR</th>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

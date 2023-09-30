@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Fabflix</title>
+</head>
+<body>
+<nav style="
+    top: 0px;
+    position: absolute;
+    left: 0px;
+    padding: 8px;
+    width: 100vw;
+    padding-top: 1vw;
+    padding-left: 4vw;
+    background: #30a1ff;
+    margin-bottom: 0vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2vw;
+">
+    <div style="
+    color: white;
+    text-decoration: none;
+    border: white solid;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: default;
+    width: 80px;
+    text-align: center;
+    ">Home</div>
+    <a href="/fabflix/top-20.html" style="
+    color: white;
+    text-decoration: none;
+    border: white solid;
+    padding: 8px;
+    font-size: 14px;
+    width: 80px;
+    text-align: center;
+    ">Top 20</a>
+    <a href="/fabflix/cart.html" style="
+    color: white;
+    text-decoration: none;
+    border: white solid;
+    padding: 8px;
+    font-size: 14px;
+    width: 80px;
+    text-align: center;
+    ">Checkout</a>
+    <a href="/fabflix/results.html?useSession=true" style="
+    color: white;
+    text-decoration: none;
+    border: white solid;
+    padding: 8px;
+    font-size: 14px;
+    width: 80px;
+    text-align: center;
+    ">Results</a>
+</nav>
+<div style="
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    gap: 8vh;
+    margin-top: 14vh;
+">
+    <div style="
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+">
+        <div style="
+    font-size: 40px;
+    margin: 4vh;
+    color: #30a1ff;
+">Browse by Genre
+        </div>
+        <div id="genres" style="
+    text-align: center;
+    width: 50vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+    justify-content: center;
+    height: 26vh;
+    overflow: auto;
+    ">
+<!--            <a class="browse-genre" href="/fabflix/results.html?genre=Action" style="-->
+<!--    font-size: 24px;-->
+<!--    color: #30a1ff;-->
+<!--">Action</a>-->
+<!--            <a class="browse-genre" href="/fabflix/results.html?genre=Adult" style="-->
+<!--    font-size: 24px;-->
+<!--    color: #30a1ff;-->
+<!--">Adult</a>-->
+<!--            <a class="browse-genre" href="/fabflix/results.html?genre=Adventure" style="-->
+<!--    font-size: 24px;-->
+<!--    color: #30a1ff;-->
+<!--">Adventure</a>-->
+<!--            <a class="browse-genre" href="/fabflix/results.html?genre=Animation" style="-->
+<!--    font-size: 24px;-->
+<!--    color: #30a1ff;-->
+<!--">Animation</a>-->
+<!--            <a class="browse-genre" href="/fabflix/results.html?genre=Biography" style="-->
+<!--    font-size: 24px;-->
+<!--    color: #30a1ff;-->
+<!--">Biography</a>-->
+<!--            <a class="browse-genre" href="/fabflix/results.html?genre=Comedy" style="-->
+<!--    font-size: 24px;-->
+<!--    color: #30a1ff;-->
+<!--">Comedy</a>-->
+<!--            <a class="browse-genre" href="/fabflix/results.html?genre=Crime" style="-->
+<!--    font-size: 24px;-->
+<!--    color: #30a1ff;-->
+<!--">Crime</a>-->
+<!--            <a class="browse-genre" href="/fabflix/results.html?genre=Documentary" style="-->
+<!--    font-size: 24px;-->
+<!--    color: #30a1ff;-->
+<!--">Documentary</a>-->
+<!--            <a class="browse-genre" href="/fabflix/results.html?genre=Drama" style="-->
+<!--    font-size: 24px;-->
+<!--    color: #30a1ff;-->
+<!--">Drama</a>-->
+<!--            <a class="browse-genre" href="/fabflix/results.html?genre=Family" style="-->
+<!--    font-size: 24px;-->
+<!--    color: #30a1ff;-->
+<!--">Family</a>-->
+<!--            <a class="browse-genre" href="/fabflix/results.html?genre=Fantasy" style="-->
+<!--    font-size: 24px;-->
+<!--    color: #30a1ff;-->
+<!--">Fantasy</a>-->
+<!--            <a class="browse-genre" href="/fabflix/results.html?genre=History" style="-->
+<!--    font-size: 24px;-->
+<!--    color: #30a1ff;-->
+<!--">History</a>-->
+<!--            <a class="browse-genre" href="/fabflix/results.html?genre=Horror" style="-->
+<!--    font-size: 24px;-->
+<!--    color: #30a1ff;-->
+<!--">Horror</a>-->
+<!--            <a class="browse-genre" href="/fabflix/results.html?genre=Music" style="-->
+<!--    font-size: 24px;-->
+<!--    color: #30a1ff;-->
+<!--">Music</a>-->
+<!--            <a class="browse-genre" href="/fabflix/results.html?genre=Musical" style="-->
+<!--    font-size: 24px;-->
+<!--    color: #30a1ff;-->
+<!--">Musical</a>-->
+<!--            <a class="browse-genre" href="/fabflix/results.html?genre=Mystery" style="-->
+<!--    font-size: 24px;-->
+<!--    color: #30a1ff;-->
+<!--">Mystery</a>-->
+<!--            <a class="browse-genre" href="/fabflix/results.html?genre=Reality" style="-->
+<!--    font-size: 24px;-->
+<!--    color: #30a1ff;-->
+<!--">Reality-TV</a>-->
+<!--            <a class="browse-genre" href="/fabflix/results.html?genre=Romance" style="-->
+<!--    font-size: 24px;-->
+<!--    color: #30a1ff;-->
+<!--">Romance</a>-->
+<!--            <a class="browse-genre" href="/fabflix/results.html?genre=Sci-Fi" style="-->
+<!--    font-size: 24px;-->
+<!--    color: #30a1ff;-->
+<!--">Sci-Fi</a>-->
+<!--            <a class="browse-genre" href="/fabflix/results.html?genre=Sport" style="-->
+<!--    font-size: 24px;-->
+<!--    color: #30a1ff;-->
+<!--">Sport</a>-->
+<!--            <a class="browse-genre" href="/fabflix/results.html?genre=Thriller" style="-->
+<!--    font-size: 24px;-->
+<!--    color: #30a1ff;-->
+<!--">Thriller</a>-->
+<!--            <a class="browse-genre" href="/fabflix/results.html?genre=War" style="-->
+<!--    font-size: 24px;-->
+<!--    color: #30a1ff;-->
+<!--">War</a>-->
+<!--            <a class="browse-genre" href="/fabflix/results.html?genre=Western" style="-->
+<!--    font-size: 24px;-->
+<!--    color: #30a1ff;-->
+<!--">Western</a>-->
+        </div>
+    </div>
+
+    <div style="
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+">
+        <div style="
+    font-size: 40px;
+    margin: 4vh;
+    color: #30a1ff;
+">
+            Browse by Title
+        </div>
+        <div style="
+    display: flex;
+    gap: 1vw;
+    font-size: 24px;
+    ">
+            <a class="browse-title" href="/fabflix/results.html?prefix=A" style="
+    color: #30a1ff;
+">A</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=B" style="
+    color: #30a1ff;
+">B</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=C" style="
+    color: #30a1ff;
+">C</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=D" style="
+    color: #30a1ff;
+">D</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=E" style="
+    color: #30a1ff;
+">E</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=F" style="
+    color: #30a1ff;
+">F</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=G" style="
+    color: #30a1ff;
+">G</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=H" style="
+    color: #30a1ff;
+">H</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=I" style="
+    color: #30a1ff;
+">I</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=J" style="
+    color: #30a1ff;
+">J</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=K" style="
+    color: #30a1ff;
+">K</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=L" style="
+    color: #30a1ff;
+">L</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=M" style="
+    color: #30a1ff;
+">M</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=N" style="
+    color: #30a1ff;
+">N</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=O" style="
+    color: #30a1ff;
+">O</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=P" style="
+    color: #30a1ff;
+">P</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=Q" style="
+    color: #30a1ff;
+">Q</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=R" style="
+    color: #30a1ff;
+">R</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=S" style="
+    color: #30a1ff;
+">S</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=T" style="
+    color: #30a1ff;
+">T</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=U" style="
+    color: #30a1ff;
+">U</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=V" style="
+    color: #30a1ff;
+">V</a>
+            <a class="browse-title" href="/fabflix/results.html??prefix=W" style="
+    color: #30a1ff;
+">W</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=X" style="
+    color: #30a1ff;
+">X</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=Y" style="
+    color: #30a1ff;
+">Y</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=Z" style="
+    color: #30a1ff;
+">Z</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=0" style="
+    color: #30a1ff;
+">0</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=1" style="
+    color: #30a1ff;
+">1</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=2" style="
+    color: #30a1ff;
+">2</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=3" style="
+    color: #30a1ff;
+">3</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=4" style="
+    color: #30a1ff;
+">4</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=5" style="
+    color: #30a1ff;
+">5</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=6" style="
+    color: #30a1ff;
+">6</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=7" style="
+    color: #30a1ff;
+">7</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=8" style="
+    color: #30a1ff;
+">8</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=9" style="
+    color: #30a1ff;
+">9</a>
+            <a class="browse-title" href="/fabflix/results.html?prefix=*" style="
+    color: #30a1ff;
+">*</a>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>

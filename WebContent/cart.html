@@ -1,0 +1,136 @@
+<!-- This page will be seen if you logged in -->
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Cart</title>
+</head>
+<body style="
+    padding: 4vw;
+">
+<div style="
+    text-align: center;
+    margin-top: 16vh;
+    margin-bottom: -10vh;
+    font-size: 36px;
+    font-weight: bold;
+    color: #30a1ff;
+">Shopping Cart</div>
+<nav style="
+    top: 0px;
+    position: absolute;
+    left: 0px;
+    padding: 8px;
+    width: 100vw;
+    padding-top: 1vw;
+    padding-left: 4vw;
+    background: #30a1ff;
+    margin-bottom: 0vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2vw;
+">
+    <a href="/fabflix/index.html" style="
+    color: white;
+    text-decoration: none;
+    border: white solid;
+    padding: 8px;
+    font-size: 14px;
+    width: 80px;
+    text-align: center;
+    ">Home</a>
+    <a href="/fabflix/top-20.html" style="
+    color: white;
+    text-decoration: none;
+    border: white solid;
+    padding: 8px;
+    font-size: 14px;
+    width: 80px;
+    text-align: center;
+    ">Top 20</a>
+    <div href="/fabflix/cart.html" style="
+    color: white;
+    text-decoration: none;
+    border: white solid;
+    padding: 8px;
+    font-size: 14px;
+    width: 80px;
+    text-align: center;
+    cursor: default;
+    ">Checkout</div>
+    <a href="/fabflix/results.html?useSession=true" style="
+    color: white;
+    text-decoration: none;
+    border: white solid;
+    padding: 8px;
+    font-size: 14px;
+    width: 80px;
+    text-align: center;
+    ">Results</a>
+</nav>
+<table id=movie_table_cart class="table table-striped" style="
+    border-radius: 1vw;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    overflow: hidden;
+    margin-top: 20vh;
+">
+    <!-- Create a table header -->
+    <thead style="
+    color: white;
+    background: #007bff;
+">
+    <tr>
+        <!-- Titles of each column-->
+        <th>Title</th>
+        <th>Quantity</th>
+        <th>Delete</th>
+        <th>Price</th>
+        <th>Total Price</th>
+    </tr>
+    </thead>
+    <!-- Table body is left empty here, will be populated with the data retrieved with top-20.js -->
+    <!-- Again, id "movie_table_body" is useful for jQuery to find this html element -->
+    <tbody id=movie_table_body_results></tbody>
+</table>
+<div style="
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 4vw;
+    margin-right: 50px;
+">
+    <div id="final-price" style="
+    font-weight: bold;
+    font-size: 30px;
+">$0.00</div>
+    <button id="checkout-button" style="
+    background: #30a1ff;
+    color: white;
+    font-weight: bold;
+    padding: 8px;
+    cursor: pointer;
+">Go to Checkout</button>
+</div>
+
+<!-- include your own JS file -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Load our own JS file -->
+<!-- The path is relative to single-star.html, since these two files are in the same directory -->
+<!-- Note the url does not contain a "/" in the beginning, which means the url is relative to current path
+     otherwise the url is relative to the root path-->
+<script src="cart.js"></script>
+</body>
+</html>

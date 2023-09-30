@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <title>Add Movie</title>
+</head>
+
+<body>
+<nav style="
+    top: 0px;
+    position: absolute;
+    left: 0px;
+    width: 100vw;
+    padding: 1vw 8px 8px 4vw;
+    background: #30a1ff;
+    margin-bottom: 0vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2vw;
+  ">
+  <a href="/fabflix/_dashboard/index.html" style="
+      color: white;
+      text-decoration: none;
+      border: white solid;
+      padding: 8px;
+      font-size: 14px;
+      width: 95px;
+      text-align: center;
+    ">Home</a>
+  <a href="/fabflix/_dashboard/star.html" style="
+      color: white;
+      text-decoration: none;
+      border: white solid;
+      padding: 8px;
+      font-size: 14px;
+      width: 95px;
+      text-align: center;
+    ">Add Star</a>
+  <a href="/fabflix/_dashboard/movie.html" style="
+      color: white;
+      text-decoration: none;
+      border: white solid;
+      padding: 8px;
+      font-size: 14px;
+      width: 95px;
+      text-align: center;
+      cursor: default;
+      font-weight: bold;
+    ">Add Movie</a>
+</nav>
+<h1 style="
+    text-align: center;
+    color: #30a1ff;
+    font-size: 64px;
+    font-weight: bold;
+    margin-top: 20vh;
+  ">Add a Movie</h1>
+<div id="add-movie-text-success" style="
+    text-align: center;
+    color: green;
+  "></div>
+<div id="add-movie-text-error" style="
+    text-align: center;
+    color: red;
+  "></div>
+<form id="add-movie-form" method="post" style="
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  ">
+  <div style="
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 30vw;
+    ">
+    <label><b>Title (required)</b></label>
+    <label>
+      <input name="movie-title" placeholder="Title" type="text" style="
+          width: 100%;
+          padding: 5px;
+        ">
+    </label>
+    <label><b>Release Year (required)</b></label>
+    <label>
+      <input name="movie-year" placeholder="Release Year" type="text" style="
+          width: 100%;
+          padding: 5px;
+        ">
+    </label>
+  </div>
+  <div style="
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 30vw;
+    ">
+    <label><b>Director (required)</b></label>
+    <label>
+      <input name="director" placeholder="Director" type="text" style="
+          width: 100%;
+          padding: 5px;
+        ">
+    </label>
+  </div>
+  <div style="
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 30vw;
+    ">
+    <label><b>Star Name (required)</b></label>
+    <label>
+      <input name="star-name" placeholder="Star Name" type="text" style="
+          width: 100%;
+          padding: 5px;
+        ">
+    </label>
+  </div>
+  <div style="
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 30vw;
+    ">
+    <label><b>Birth Year (optional)</b></label>
+    <label>
+      <input name="birth-year" placeholder="Birth Year" type="text" style="
+          width: 100%;
+          padding: 5px;
+        ">
+    </label>
+  </div>
+  <div style="
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 30vw;
+    ">
+    <label><b>Genre (required)</b></label>
+    <label>
+      <input name="genre" placeholder="Genre" type="text" style="
+          width: 100%;
+          padding: 5px;
+        ">
+    </label>
+  </div>
+  <div style="
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 30vw;
+    ">
+    <input type="submit" value="Submit" style="
+        font-size: 22px;
+        cursor: pointer;
+        background: #30a1ff;
+        font-weight: bold;
+        color: white;
+        width: 20vw;
+        margin-top: 2vh;
+        margin-left: auto;
+        margin-right: auto;
+      ">
+  </div>
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="addMovie.js"></script>
+</body>
+
+</html>

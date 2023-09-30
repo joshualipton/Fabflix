@@ -1,0 +1,88 @@
+<!-- This page will be redirected from any url if you are not logged in -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Login to Fabflix</title>
+    <script src='https://www.google.com/recaptcha/api.js' type="text/javascript"></script>
+</head>
+<body style="
+    background: rgb(0,123,255);
+    background: linear-gradient(180deg, rgba(0,123,255,1) 0%, rgba(0,168,255,0.6083683473389356) 100%);
+">
+<div style="
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    background: white;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    gap: 4vh;
+    margin-left: 50vw;
+">
+    <h2 style="
+    color: #30a1ff;
+    font-weight: bold;
+    font-size: 48px;
+">Employee Login</h2>
+    <!-- Set the method to POST to avoid showing the username/password in the URL
+         The default action is disabled to allow your own implementation. -->
+    <form id="login_form_employee" method="post" ACTION="form-recaptcha" style="
+    display: flex;
+    flex-direction: column;
+">
+        <div style="
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30vw;
+">
+            <label><b>Username</b></label>
+            <label>
+                <input name="username" placeholder="Enter Username" type="text" style="
+    width: 100%;
+    padding: 5px;
+">
+            </label>
+            <label><b>Password</b></label>
+            <label>
+                <input name="password" placeholder="Enter Password" type="password" style="
+    width: 100%;
+    padding: 5px;
+">
+            </label>
+        </div>
+        <div class="g-recaptcha" data-sitekey="6Le-LfIlAAAAAHqRUJRoebXALb1TLKT04wo7h7tV"></div>
+        <input type="submit" value="Login" style="
+    font-size: 22px;
+    cursor: pointer;
+    background: #30a1ff;
+    font-weight: bold;
+    color: white;
+">
+    </form>
+
+    <div id="login_error_message_employee" style="
+    font-size: 18px;
+    font-weight: bold;
+    color: #de3434;
+"></div>
+</div>
+
+
+<!-- include jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- include our own JS file -->
+<script src="./employeeLogin.js"></script>
+
+</body>
+</html>
